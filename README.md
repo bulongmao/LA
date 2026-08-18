@@ -2,6 +2,8 @@
 
 基于 NVIDIA LocateAnything-3B 的食物餐盘定位与批量推理项目。仓库整合 LocateAnything/Eagle 相关源码、批处理脚本、LoRA 数据准备与评估工具，用于从餐饮图像中定位完整餐盘或目标食物区域。
 
+![LocateAnything-3B 六阶段工程闭环](docs/readme/six-stage-pipeline.png)
+
 ## 功能
 
 - LocateAnything-3B 单目标/多目标视觉定位
@@ -34,9 +36,13 @@ LA-3B 自动框选
 
 模型输出 `<box><x1><y1><x2><y2></box>`（0–1000 归一化坐标），管线将其映射到原图像素，再导出 YOLO normalized `xywh`。多框时使用 IoU 0.98 去重并选择最大有效框；无有效框时保留整图兜底标记，便于后续人工筛查。
 
+![Native MTP 批量推理](docs/readme/mtp-batch.png)
+
 ## 数据划分与训练配置
 
 为避免同菜品目录内的高相似图片泄漏到验证/测试集，数据按文件夹而非按图片随机划分。当前汇报快照为：
+
+![按菜品文件夹划分数据](docs/readme/dataset-split.png)
 
 | 划分 | 文件夹 | 图片 |
 |---|---:|---:|
@@ -62,11 +68,15 @@ V100 不支持项目默认的 FlashAttention2 新卡路径，因此视觉侧改�
 
 在同一数据、Prompt 和后处理规则下对比 Base 与 LoRA：
 
+![Base 与 LoRA 的覆盖率与纯度对比](docs/readme/lora-metrics.png)
+
 - 100 张快速集上 Mean IoU 约 **+0.52 个百分点**（59 张改善，17 张退化）。
 - 完整验证集上 Mean IoU 约 **-0.32 个百分点**，中位数也略有下降。
 - Coverage 约 **+1.47 个百分点**，Purity 约 **-1.45 个百分点**。
 
 这表明 LoRA 更倾向扩大框以减少盘沿漏检，但也更容易混入桌面背景。因此迭代目标不应只是提高 IoU，而应同时约束 Coverage 与 Purity，并对中大目标的过度扩框难例进行定向补样。
+
+![LoRA 框选改善与退化样例](docs/readme/lora-examples.png)
 
 > 上述数据与指标均来自当前项目汇报快照，只表示该版本、该数据划分下的阶段性结果，不是 LocateAnything-3B 的通用性能基准。
 
