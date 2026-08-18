@@ -1,0 +1,39 @@
+{
+  "image_path": "/data/ljy/locate_anything_project/eval_images/val_quick100/1416/14160028.jpg",
+  "width": 426,
+  "height": 320,
+  "phrase": "A whole plate of food including the visible plate rim, excluding table, background, text, watermark, and other plates",
+  "query": "Locate a single instance that matches the following description: A whole plate of food including the visible plate rim, excluding table, background, text, watermark, and other plates.",
+  "grounding_mode": "ground_single",
+  "raw_answer": "<box><0><0><1000><997></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box><box><0><0><1000><1000></box>",
+  "num_model_boxes": 1,
+  "all_model_boxes": [
+    {
+      "x1": 0.0,
+      "y1": 0.0,
+      "x2": 426.0,
+      "y2": 319.04,
+      "width": 426.0,
+      "height": 319.04,
+      "area": 135911.04,
+      "area_ratio": 0.9970000000000001
+    }
+  ],
+  "selected_box": {
+    "x1": 0.0,
+    "y1": 0.0,
+    "x2": 426.0,
+    "y2": 319.04,
+    "width": 426.0,
+    "height": 319.04,
+    "area": 135911.04,
+    "area_ratio": 0.9970000000000001,
+    "source": "largest_model_box"
+  },
+  "selected_rule": "largest_model_box",
+  "worker_rank": 0,
+  "gpu_id": 0,
+  "batch_size": 1,
+  "runtime_sec": 0.0009,
+  "error": ""
+}

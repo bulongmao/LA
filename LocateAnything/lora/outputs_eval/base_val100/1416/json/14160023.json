@@ -1,0 +1,39 @@
+{
+  "image_path": "/data/ljy/locate_anything_project/eval_images/val_quick100/1416/14160023.jpg",
+  "width": 426,
+  "height": 320,
+  "phrase": "A whole plate of food including the visible plate rim, excluding table, background, text, watermark, and other plates",
+  "query": "Locate a single instance that matches the following description: A whole plate of food including the visible plate rim, excluding table, background, text, watermark, and other plates.",
+  "grounding_mode": "ground_single",
+  "raw_answer": "<ref>A whole plate of food including the visible plate rim, excluding table, background, text, watermark, and other plates.</ref><box><36><0><979><987></box><|im_end|>",
+  "num_model_boxes": 1,
+  "all_model_boxes": [
+    {
+      "x1": 15.335999999999999,
+      "y1": 0.0,
+      "x2": 417.054,
+      "y2": 315.84,
+      "width": 401.71799999999996,
+      "height": 315.84,
+      "area": 126878.61311999998,
+      "area_ratio": 0.9307409999999998
+    }
+  ],
+  "selected_box": {
+    "x1": 15.335999999999999,
+    "y1": 0.0,
+    "x2": 417.054,
+    "y2": 315.84,
+    "width": 401.71799999999996,
+    "height": 315.84,
+    "area": 126878.61311999998,
+    "area_ratio": 0.9307409999999998,
+    "source": "largest_model_box"
+  },
+  "selected_rule": "largest_model_box",
+  "worker_rank": 0,
+  "gpu_id": 0,
+  "batch_size": 1,
+  "runtime_sec": 0.0003,
+  "error": ""
+}

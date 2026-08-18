@@ -1,0 +1,116 @@
+{
+  "image_name": "8440000.jpg",
+  "image_path": "/data/ljy/locate_anything_project/images/844/8440000.jpg",
+  "image_size": {
+    "width": 597,
+    "height": 448
+  },
+  "target_dish_name": "main food serving",
+  "target_dish_aliases": "main food serving, the most prominent complete food dish in the image, the complete serving of food, the main meal shown in the image",
+  "classes_txt": "/data/ljy/locate_anything_project/outputs/844/classes.txt",
+  "yolo_classes": {
+    "0": "food"
+  },
+  "generation_mode": "hybrid",
+  "max_new_tokens": 128,
+  "do_sample": false,
+  "elapsed_seconds": 3.416,
+  "food_prompt": "Locate the visible target food: main food serving, the most prominent complete food dish in the image, the complete serving of food, the main meal shown in the image. The bounding box should tightly cover only the target food, and should exclude visible text, numbers, logos, labels, menus, printed paper, and background areas. Return exactly one bounding box around the main visible main food serving serving. The box must contain visible main food serving. Return only one bounding box.",
+  "container_prompt": "Locate the plate, bowl, tray, box, or container that directly holds the target food: main food serving, the most prominent complete food dish in the image, the complete serving of food, the main meal shown in the image. Return exactly one bounding box around the directly supporting container. If the target food is on a flat plate or shallow tray, include the visible outer edge of that plate or tray, even if the rim is thin or partly covered by the food. Do not search for containers independently from the target food. And should exclude visible text, numbers, logos, labels, menus, printed paper, and background areas. Return only one bounding box.",
+  "food_answer": "<ref>main food serving, the most prominent complete food dish in the image, the complete serving of food, the main meal shown in the image. The bounding should tightly tightly only only target, and should exclude</ref><box><0><197><980><910></box><|im_end|>",
+  "container_answer": "<ref>direct food serving, the most prominent complete food dish in the image, the complete serving of food, the main meal shown in the image</ref><box><0><176><998><1000></box><|im_end|>",
+  "food_boxes": [
+    {
+      "box_id": 0,
+      "x1": 0,
+      "y1": 88.26,
+      "x2": 585.06,
+      "y2": 407.68,
+      "width": 585.06,
+      "height": 319.42,
+      "area": 186882.21,
+      "aspect_ratio": 1.832
+    }
+  ],
+  "container_boxes": [
+    {
+      "box_id": 0,
+      "x1": 0,
+      "y1": 78.85,
+      "x2": 595.81,
+      "y2": 448.0,
+      "width": 595.81,
+      "height": 369.15,
+      "area": 219942.98,
+      "aspect_ratio": 1.614
+    }
+  ],
+  "selected_food_box": {
+    "box_id": 0,
+    "x1": 0,
+    "y1": 88.26,
+    "x2": 585.06,
+    "y2": 407.68,
+    "width": 585.06,
+    "height": 319.42,
+    "area": 186882.21,
+    "aspect_ratio": 1.832,
+    "role": "food"
+  },
+  "selected_container_box": {
+    "box_id": 0,
+    "x1": 0,
+    "y1": 78.85,
+    "x2": 595.81,
+    "y2": 448.0,
+    "width": 595.81,
+    "height": 369.15,
+    "area": 219942.98,
+    "aspect_ratio": 1.614,
+    "role": "container"
+  },
+  "merged_box": {
+    "box_id": 0,
+    "x1": 0,
+    "y1": 78.85,
+    "x2": 595.81,
+    "y2": 448.0,
+    "width": 595.81,
+    "height": 369.15,
+    "area": 219943.26,
+    "aspect_ratio": 1.614,
+    "post_mode": "direct_union_food_container",
+    "box_status": "food_container_union_box",
+    "area_ratio": 0.8224
+  },
+  "boxes": [
+    {
+      "box_id": 0,
+      "x1": 0,
+      "y1": 78.85,
+      "x2": 595.81,
+      "y2": 448.0,
+      "width": 595.81,
+      "height": 369.15,
+      "area": 219943.26,
+      "aspect_ratio": 1.614,
+      "post_mode": "direct_union_food_container",
+      "box_status": "food_container_union_box",
+      "area_ratio": 0.8224
+    }
+  ],
+  "box_status": "food_container_union_box",
+  "num_food_boxes": 1,
+  "num_container_boxes": 1,
+  "num_boxes": 1,
+  "union_strategy": {
+    "rule": "direct_union",
+    "description": "if both food and container exist, final_box = union(food, container); else fallback to existing one",
+    "draw_debug_boxes": false
+  },
+  "yolo_path": "/data/ljy/locate_anything_project/outputs/844/labels/8440000.txt",
+  "vis_path": "/data/ljy/locate_anything_project/outputs/844/vis/8440000_vis.jpg",
+  "json_path": "/data/ljy/locate_anything_project/outputs/844/json/8440000.json",
+  "num_yolo_boxes": 1,
+  "status": "success_food_container_union_box"
+}
